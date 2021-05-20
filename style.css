@@ -1,0 +1,154 @@
+nav a, nav:before, nav div:before {
+  display: inline-block;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  cursor: pointer; /* курсор в виде руки, обязателен для Opera Mini */
+  background: rgb(28, 82, 111); /* цвет фона кнопки "меню" */
+}
+nav a {
+  width: 25%; /* 4 пункта меню, то есть 100%/4 */
+  background: rgb(46,95,122); /* фон пунктов меню */
+  text-decoration: none;
+}
+nav a:hover {
+  background: rgb(96,145,172); /* фон пунктов при наведении */
+}
+@media (max-width: 800px) { /* для экранов, меньше 800px */
+  nav a, nav:before, nav div:before {
+  width: 100%; /* пункты меню растягиваются на всю ширину блока */
+  }
+  nav:before {
+  content: "меню";
+  }
+  nav:focus:before {
+  content: none;
+  }
+  nav:focus div:before {
+  content: "свернуть меню";
+  }
+  nav:not(:focus) div:not(:active) { /* магия кнопки "меню", благодаря чему навигация скрывается/появляется по щелчку */
+  display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+	table.table-2 tr{
+		display: block;
+	}
+	table.table-2 tr{
+		margin-bottom: 30px;
+	}
+	table.table-2 th, table.table-2 td{
+		display: block;
+		text-align: center;
+	}
+
+  .photos {
+  	text-align: center;
+  	margin: 0 0 20px 0;
+  	overflow: hidden;
+  }
+  .photos a {
+  	width: 25%;
+  	display: block;
+  	float: left;
+  	line-height: 0;
+  }
+  .photos img {
+  	width: 100%;
+  	height: auto;
+  }
+}
+
+  @media screen and (max-width: 800px) {
+  	.photos a {
+  		width: 50%;
+  		float: none;
+  	}
+  }
+
+
+  .resp-tab {
+      border-radius: 5px;
+      font-weight: normal;
+      border: none;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 100%;
+      white-space: nowrap;
+      background-color: white;
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2 );
+  }
+  .resp-tab td, .resp-tab th {
+      text-align: center;
+      padding: 8px;
+      font-size: 15px;
+      border: none;
+      font-family: Verdana, sans-serif;
+  }
+  .resp-tab td {
+      font-size: 13px;
+      border-right: 1px solid #E6E4E4;
+  }
+  .resp-tab th {
+      color: #ffffff;
+      background: #2d6b9f;
+  }
+  .resp-tab th:nth-child(odd) {
+      background: #337AB7;
+  }
+  .resp-tab tr:nth-child(even) {
+      background: #F8F8F8;
+  }
+  @media (max-width: 767px) {
+      .resp-tab {
+          display: block;
+          width: 100%;
+      }
+      .resp-tab thead,
+      .resp-tab tbody,
+      .resp-tab thead th {
+          display: block;
+      }
+      .resp-tab thead {
+          float: left;
+      }
+      .resp-tab tbody {
+          width: auto;
+          position: relative;
+          overflow-x: auto;
+      }
+      .resp-tab td, .resp-tab th {
+          padding: 10px 2px;
+          box-sizing: border-box;
+          overflow-x: hidden;
+          overflow-y: auto;
+          width: 160px;
+          font-size: 13px;
+          text-overflow: ellipsis;
+      }
+      .resp-tab thead th {
+          text-align: center;
+      }
+      .resp-tab tbody tr {
+          display: table-cell;
+      }
+      .resp-tab tbody tr:nth-child(odd) {
+          background: none;
+      }
+      .resp-tab tr:nth-child(even) {
+          background: transparent;
+      }
+      .resp-tab tr td:nth-child(odd) {
+          background: #F8F8F8;
+          border-right: 1px solid #E6E4E4;
+      }
+      .resp-tab tr td:nth-child(even) {
+          border-right: 1px solid #E6E4E4;
+      }
+      .resp-tab td {
+          display: block;
+          text-align: center;
+      }
+  }
